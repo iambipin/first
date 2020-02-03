@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My First Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Rajdhani|Zhi+Mang+Xing&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body>
+
+    <div class="frame">
+
+      <table>
+
+        <tr>
+          <td colspan="3"><input id="text" class="text"></td>
+          <td><input type="button" class="button" name="" value="C" onclick="clr()"></td>
+        </tr>
+
+
+        <tr>
+          <td><input type="button" class="button" value="9" onclick="clic('9')"></td>
+          <td><input type="button" class="button" value="8" onclick="clic('8')"></td>
+          <td><input type="button" class="button" value="7" onclick="clic('7')"></td>
+          <td><input type="button" class="button" value="=" onclick="so()"></td>
+        </tr>
+
+
+        <tr>
+          <td><input type="button" class="button" value="6" onclick="clic('6')"></td>
+          <td><input type="button" class="button" value="5" onclick="clic('5')"></td>
+          <td><input type="button" class="button" value="4" onclick="clic('4')"></td>
+          <td><input type="button" class="button" value="+" onclick="clic('+')"></td>
+        </tr>
+
+
+        <tr>
+          <td><input type="button" class="button" value="3" onclick="clic('3')"></td>
+          <td><input type="button" class="button" value="2" onclick="clic('2')"></td>
+          <td><input type="button" class="button" value="1" onclick="clic('1')"></td>
+          <td><input type="button" class="button" value="-" onclick="clic('-')"></td>
+        </tr>
+
+        <tr>
+          <td><input type="button" class="button" name="" value="0" onclick="clic('0')"></td>
+          <td><input type="button" class="button" name="" value="." onclick="clic('.')"></td>
+          <td><input type="button" class="button" name="" value="*" onclick="clic('*')"></td>
+          <td><input type="button" class="button" name="" value="/" onclick="clic('/')"></td>
+        </tr>
+
+      </table>
+      <p>"बड़ी मेहनत से बनाये है‍‍‍‍‍‍‍‍!!"</p>
+    </div>
+    <script type="text/javascript">
+    function clic(n)
+    {
+      document.getElementById("text").value+=n;
+    }
+
+    function clr()
+    {
+      document.getElementById("text").value=" ";
+    }
+
+    function so()
+    {
+      document.getElementById("text").value=eval(document.getElementById("text").value);
+    }
+    </script>
+    <link rel="stylesheet" href="cal.css">
+
+  </body>
+</html>
